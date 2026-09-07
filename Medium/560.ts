@@ -18,3 +18,6 @@ function subarraySumEqual(nums: number [], k: number): number {
 
     return count;
 }
+
+
+console.log(subarraySumEqual([1,1,1],2))
