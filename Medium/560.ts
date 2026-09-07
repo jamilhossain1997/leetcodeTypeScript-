@@ -20,4 +20,6 @@ function subarraySumEqual(nums: number [], k: number): number {
 }
 
 
-console.log(subarraySumEqual([1,1,1],2))
+console.log(subarraySumEqual([1,1,1],2));
+
+console.log(subarraySumEqual([1,2,3],3));
