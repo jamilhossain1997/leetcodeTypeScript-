@@ -1,16 +1,17 @@
 function twoSum(nums: number[], target: number): number[] {
-    const seen = new Map<number, number>(); // value -> index
-    for (let i=0; i<nums.length; i++){
-        const complement = target - nums[i];
+   const seen = new Map<number,number> ();
 
-        if (seen.has(complement)){
-            return [seen.get(complement)!, i];
-        }
+   for(let i=0; i < nums.length; i++){
+     const complement = target-nums[i];
 
-        seen.set(nums[i],i);
-    }
+     if(seen.has(complement)){
+       return [seen.get(complement)!,i];
+     }
 
-    return [];
+     seen.set(nums[i],i);
+   }
+
+   return [];
 }
 
 console.log(twoSum([2, 7, 11, 15], 9)); // [0, 1]
