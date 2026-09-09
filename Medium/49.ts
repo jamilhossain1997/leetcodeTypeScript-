@@ -1,15 +1,16 @@
-function groupAnagrams(strs: string[]): string[][] {
-    const seen = new Map<string, string[]>();
-    for (const str of strs){
-        const key = str.split('').sort().join('');
+function groupAnagrams(strs:string[]):string[][]{
+  const seen = new Map<string,string[]>();
 
-        if ( !seen.has(key)){
-            seen.set(key,[]);
-        }
-        seen.get(key)!.push(str);
-        
+  for(const str of strs){
+    const key = str.split('').sort().join('');
+    if(!seen.has(key)){
+        seen.set(key,[]);
     }
-    return Array.from(seen.values());
+
+    seen.get(key)!.push(str);
+  }
+
+  return Array.from(seen.values());
 }
 
 console.log(groupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"]));
