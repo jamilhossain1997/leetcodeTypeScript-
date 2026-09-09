@@ -1,15 +1,16 @@
 function topKFrequent(nums: number[], k: number): number[] {
-    const seen = new Map<number, number>();
+    const seen = new Map<number ,number> ();
+
     for(const num of nums){
         seen.set(num,(seen.get(num) ?? 0)+1);
-
     }
-    const result = [...seen.entries()]
-         .sort((a,b)=> b[1]-a[1])
-         .slice(0,k)
-         .map(entry=> entry[0]);
 
-    return result;
+    const result =[...seen.entries()]
+              .sort((a,b)=>b[1]-a[1])
+              .slice(0,k)
+              .map(enter =>enter[0]);
+              
+    return result ;
 }
 
 console.log(topKFrequent([1,1,1,2,2,3], 2));
