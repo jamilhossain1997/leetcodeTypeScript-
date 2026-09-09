@@ -1,16 +1,16 @@
 function isAnagram(s: string , t: string ): boolean{
-    if(s.length != t.length){
-        return false;
-    }
-
+    const seen =new Map<number,number> ();
+    
     const count = new Array(26).fill(0);
 
     for(const c of s){
-        count[c.charCodeAt(0) - 'a'.charCodeAt(0)]++;
+        count[c.charCodeAt(0)-'a'.charCodeAt(0)]++;
     }
+   
     for(const c of t){
-        count[c.charCodeAt(0) - 'a'.charCodeAt(0)]--;
+        count[c.charCodeAt(0)-'a'.charCodeAt(0)]--;
     }
+
 
     return count.every(c=> c==0);
 }
