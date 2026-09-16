@@ -32,3 +32,6 @@ function threeSum(nums:number[]): number [][]{
 
     return result;
 }
+
+
+console.log(threeSum([-1,0,1,2,-1,-4]));
